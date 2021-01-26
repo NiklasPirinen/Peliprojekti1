@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
+    public AudioSource bump;
     private gameManager gM;
     public float velocity;
     private Rigidbody2D rb;
@@ -25,6 +26,7 @@ public class playerController : MonoBehaviour
     {
         if (collision.tag == "Object")
         {
+            bump.Play();
             gM.GameOver();
         }
     }

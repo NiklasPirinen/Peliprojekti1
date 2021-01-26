@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class addScore : MonoBehaviour
 {
+    public AudioSource scoreSound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            Score.score++;
+        scoreSound.Play();
+        Score.score++;
     }
 }
